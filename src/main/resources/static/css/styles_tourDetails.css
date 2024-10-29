@@ -1,0 +1,105 @@
+/* Đặt lại các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thiết lập cho body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Container chính */
+.details-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+.details-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+}
+
+/* Bố cục thông tin khu du lịch */
+.tour-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Hình ảnh khu du lịch */
+.tour-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tour-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Thông tin chi tiết */
+.tour-details {
+    flex: 2;
+    min-width: 300px;
+}
+
+.tour-details p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.tour-details p strong {
+    color: #333;
+}
+
+.tour-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* Nút quay lại trang chủ */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .tour-info {
+        flex-direction: column;
+    }
+
+    .tour-details p {
+        font-size: 16px;
+    }
+
+    .details-container h1 {
+        font-size: 28px;
+    }
+}
+

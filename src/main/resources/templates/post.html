@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Khu Du Lịch</title>
+    <link rel="stylesheet" href="/css/styles_post.css">
+</head>
+<body>
+<div class="form-container-full">
+    <h2>Đăng Khu Du Lịch</h2>
+    <form action="/post" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <label for="tour_name">Tên Khu Du Lịch</label>
+            <input type="text" id="tour_name" name="tour_name" placeholder="Nhập tên khu du lịch" required>
+        </div>
+        <div class="input-group">
+            <label for="tour_location">Địa Chỉ</label>
+            <input type="text" id="tour_location" name="tour_location" placeholder="Nhập địa chỉ khu du lịch" required>
+        </div>
+        <div class="input-group">
+            <label for="tour_contact">Liên Hệ</label>
+            <input type="text" id="tour_contact" name="tour_contact" placeholder="Số điện thoại hoặc email liên hệ" required>
+        </div>
+        <div class="input-group">
+            <label for="tour_description">Mô Tả</label>
+            <textarea id="tour_description" name="tour_description" placeholder="Mô tả ngắn về khu du lịch" required></textarea>
+        </div>
+        <div class="input-group">
+            <label for="tour_image">Ảnh Đại Diện</label>
+            <input type="file" id="tour_image" name="tour_image" required>
+        </div>
+        <button type="submit" class="btn">Đăng Khu Du Lịch</button>
+    </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Danh sách các tour</title>
+  <!-- Thêm file CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/tourList.css"/>
+</head>
+<body>
+
+<h1>Danh sách các tour</h1>
+
+<div class="tour-list">
+  <!-- Lặp qua danh sách các tour -->
+  <div th:each="tour : ${tours}" class="tour-item">
+    <h2 th:text="${tour.name}">Tên tour</h2>
+    <p th:text="${tour.description}">Mô tả</p>
+    <img th:src="@{/imageUrl/{id}(id=${tour.id})}" alt="Tour Image" class="tour-image"/>
+    <p>Địa điểm: <span th:text="${tour.location}"></span></p>
+    <p>Liên hệ: <span th:text="${tour.contact}"></span></p>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tourItems = document.querySelectorAll(".tour-item");
+    const modalOverlay = document.createElement("div");
+    modalOverlay.classList.add("modal-overlay");
+
+    // Tạo nội dung modal và nút đóng
+    modalOverlay.innerHTML = `
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    `;
+    document.body.appendChild(modalOverlay);
+
+    const modalClose = modalOverlay.querySelector(".modal-close");
+    const modalBody = modalOverlay.querySelector(".modal-body");
+
+    // Khi nhấn vào một tour-item
+    tourItems.forEach(item => {
+      item.addEventListener("click", function () {
+        modalBody.innerHTML = item.innerHTML; // Copy nội dung của tour-item vào modal
+        modalOverlay.style.display = "flex"; // Hiển thị modal
+      });
+    });
+
+    // Khi nhấn nút đóng modal
+    modalClose.addEventListener("click", function () {
+      modalOverlay.style.display = "none"; // Ẩn modal
+    });
+
+    // Đóng modal khi nhấp ra ngoài vùng modal
+    modalOverlay.addEventListener("click", function (e) {
+      if (e.target === modalOverlay) {
+        modalOverlay.style.display = "none";
+      }
+    });
+  });
+</script>

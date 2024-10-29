@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Khu Du Lịch</title>
+  <link rel="stylesheet" href="/css/styles_tourDetails.css">
+</head>
+<body>
+<div class="details-container">
+  <h1>Chi Tiết Khu Du Lịch</h1>
+  <div class="tour-info">
+    <div class="tour-image">
+     <img th:src="'data:image/jpeg;base64,' + ${tourImage}" alt="Ảnh khu du lịch">
+    </div>
+    <div class="tour-details">
+      <p><strong>Tên Khu Du Lịch:</strong> <span th:text="${tourName}"></span></p>
+      <p><strong>Địa Chỉ:</strong> <span th:text="${tourLocation}"></span></p>
+      <p><strong>Liên Hệ:</strong> <span th:text="${tourContact}"></span></p>
+      <p><strong>Mô Tả:</strong></p>
+      <p><span th:text="${tourDescription}"></span></p>
+    </div>
+  </div>
+  <a href="/" class="btn">Quay Lại Trang Chủ</a>
+</div>
+</body>
+</html>

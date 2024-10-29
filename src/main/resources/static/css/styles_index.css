@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero-section {
+    background-image: url('https://example.com/ha-long-bay.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    text-align: center;
+    color: #171616;
+    padding-top: 200px;
+}
+
+.hero-section h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.about-section, .destinations-section, .footer {
+    padding: 50px;
+    text-align: center;
+}
+
+.destination {
+    margin: 20px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+}
+
+.footer h2, .footer p {
+    margin-bottom: 10px;
+}
